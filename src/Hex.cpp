@@ -3653,13 +3653,9 @@ void speak_forecast(void *parameters)
         SpeakClock();
           delay(2000);
 
-        Serial.print("Zambretti mp3 = ");
-        Serial.println(_Zambretti_mp3);
         myDFPlayer.playFolder(2, _Zambretti_trend_mp3); //only one of these will have a value
           delay(1000);
           yield();
-        Serial.print("Zambretti mp3 = ");
-        Serial.println(_Zambretti_mp3);
         myDFPlayer.playFolder(2, _Zambretti_mp3);
           yield();
         delay(3000);
